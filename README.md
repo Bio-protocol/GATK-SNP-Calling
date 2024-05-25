@@ -21,7 +21,7 @@ This is the workflow to show a step-by-step pipeline to call SNPs.
 
 All the softwares were installed on Linux (x64) operating system (OS).
 
-#### Installing [Anaconda](https://www.anaconda.com/](https://www.anaconda.com/download)
+#### Installing [Anaconda](https://www.anaconda.com/download)
 ```
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 bash Anaconda3-2024.02-1-Linux-x86_64.sh
