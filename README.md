@@ -68,7 +68,7 @@ The raw reads and adaptor sequences were included in input folder. The B73 versi
 
 ## Major Step
 ### Step1: Raw reads trimming
-> Note: The trimmomatic software should run on Java environment
+> Note: The trimmomatic software should run on 1.8.0+ Java environment
 ```
 sh ./workflow/1_reads_trim.sh
 ```
@@ -193,7 +193,7 @@ rm *.RG.bam
 > -O output.RG.RD.BQSR.bam    
 > ```
 ## Step5: GATK SNP Calling
-> Java environment (Java SE 8) is required for this step
+> Java environment (1.8.0+) is required for this step
 ```
 sh ./workflow/5_GATK.sh
 ```
