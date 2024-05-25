@@ -18,6 +18,9 @@ This is the workflow to show a step-by-step pipeline to call SNPs.
 ![](https://github.com/hecheng90/GATK-SNP-Calling/blob/main/graphs/Diagram.png)
 ## Installation
 ### Required software and installation
+
+#### All the softwares were installed on Linux (x64) operating system (OS).
+
 #### Installing [Anaconda](https://www.anaconda.com/)
 ```
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.0-Linux-x86_64.sh
