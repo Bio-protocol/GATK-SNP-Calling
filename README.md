@@ -19,7 +19,7 @@ This is the workflow to show a step-by-step pipeline to call SNPs.
 ## Installation
 ### Required software and installation
 
-#### All the softwares were installed on Linux (x64) operating system (OS).
+All the softwares were installed on Linux (x64) operating system (OS).
 
 #### Installing [Anaconda](https://www.anaconda.com/)
 ```
