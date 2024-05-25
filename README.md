@@ -1,4 +1,4 @@
-# GATK-SNP-Calling
+# GATK Variant Discovery Pipeline
 ## Introduction
 Phenotypic variations of most biological traits are largely driven by genomic variants. The single nucleotide polymorphism (SNP) is the most common form of genomic variants. Multiple algorithms have been developed for discovering variants, including SNPs, with next generation sequencing (NGS) data. Here we present a widely used variant discovery pipeline based on the software Genome Analysis ToolKits (GATK). The pipeline uses whole genome sequencing (WGS) data as input data and includes read mapping, variant calling, and variant filtering processes. This pipeline has been successfully applied to many genomic projects and represent a solution for variant calling using NGS data.
  
