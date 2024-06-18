@@ -1,4 +1,4 @@
-# GATK Variant Discovery Pipeline
+![image](https://github.com/Bio-protocol/GATK-SNP-Calling/assets/54077130/a50034fe-3804-45d3-9c8c-17df6a1f8fa1)# GATK Variant Discovery Pipeline
 ## Introduction
 Phenotypic variations of most biological traits are largely driven by genomic variants. The single nucleotide polymorphism (SNP) is the most common form of genomic variants. Multiple algorithms have been developed for discovering variants, including SNPs, with next generation sequencing (NGS) data. Here we present a widely used variant discovery pipeline based on the software Genome Analysis ToolKits (GATK). The pipeline uses whole genome sequencing (WGS) data as input data and includes read mapping, variant calling, and variant filtering processes. This pipeline has been successfully applied to many genomic projects and represent a solution for variant calling using NGS data.
  
@@ -77,6 +77,13 @@ The sample data for GATK SNP Calling workflow include:
 The raw reads and adaptor sequences were included in input folder. The B73 version4 reference genome can be downloaded from MaizeGDB (https://download.maizegdb.org/Zm-B73-REFERENCE-GRAMENE-4.0/ Zm-B73-REFERENCE-GRAMENE-4.0.fa.gz)
 
 ## Major Step
+### Step0: Download necessary files
+> You can download the github repository with this command line, which includes all the files and scripts need for this protocol:
+```
+git clone https://github.com/Bio-protocol/GATK-SNP-Calling.git
+cd GATK-SNP-Calling
+```
+
 ### Step1: Raw reads trimming
 > Note: The trimmomatic software should run on 1.8.0+ Java environment
 ```
