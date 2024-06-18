@@ -28,7 +28,16 @@ bash Anaconda3-2024.02-1-Linux-x86_64.sh
 echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
-#### Create and load conda environment
+
+#### All the softwares can be installed through the GATK_SNP.yaml file in the github repository.
+> One-command run to install all softwares by GATK_SNP.yaml 
+```
+conda env create -f GATK_SNP.yaml
+source activate GATK_SNP
+```
+
+#### (Optional) You can also create conda environment step by step below
+> Create and load conda environment
 ```
 conda create -n GATK_SNP
 source activate GATK_SNP
@@ -59,6 +68,7 @@ conda install -c bioconda gatk4
 ```
 conda install -c bioconda vcftools
 ```
+
 ## Input Data
 The sample data for GATK SNP Calling workflow include: 
 - B73/A188.R1/2.fq.gz: Paired-end whole genome sequencing reads for two test samples.
