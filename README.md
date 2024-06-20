@@ -222,7 +222,6 @@ sh ./workflow/5_GATK.sh
 #!/bin/bash
 ## gatk index for reference genome ##
 samtools faidx ./input/B73Ref4.fa
-mv B73Ref4.fa.fai ./input/
 gatk CreateSequenceDictionary -R ./input/B73Ref4.fa -O ./input/B73Ref4.dict
 
 ## GATK SNP Calling (2 samples together) ##
@@ -231,7 +230,7 @@ gatk HaplotypeCaller --java-options '-Xmx24g' -R ./input/B73Ref4.fa -I ./cache/B
 ## GATK Short Variant Calling (with bam list) ##
 gatk HaplotypeCaller --java-options '-Xmx24g' \
 -R ./input/B73Ref4.fa \
--I ./input/bam_list.txt \
+-I ./input/bam.list \
 -O ./output/B73_A188.raw.0.vcf
 ```
 ### Notes:
