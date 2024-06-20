@@ -1,13 +1,15 @@
 name: GATK_SNP
 channels:
   - bioconda
+  - conda-forge
   - defaults
 dependencies:
-  - _libgcc_mutex=0.1=main
-  - _openmp_mutex=5.1=1_gnu
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
   - bwa=0.7.17=h5bf99c6_8
   - bzip2=1.0.8=h5eee18b_6
-  - ca-certificates=2024.3.11=h06a4308_0
+  - c-ares=1.28.1=hd590300_0
+  - ca-certificates=2024.6.2=hbcca054_0
   - dbus=1.13.18=hb2f20db_0
   - expat=2.6.2=h6a678d5_0
   - freetype=2.12.1=h4a9f257_0
@@ -15,24 +17,34 @@ dependencies:
   - gdbm=1.18=hd4cb3f1_4
   - glib=2.78.4=h6a678d5_0
   - glib-tools=2.78.4=h6a678d5_0
+  - htslib=1.20=h81da01d_0
+  - krb5=1.20.1=h143b758_1
   - ld_impl_linux-64=2.38=h1181459_1
+  - libcurl=8.7.1=h251f7ec_0
+  - libdeflate=1.20=hd590300_0
+  - libedit=3.1.20230828=h5eee18b_0
+  - libev=4.33=hd590300_2
   - libffi=3.4.4=h6a678d5_1
-  - libgcc-ng=11.2.0=h1234567_1
+  - libgcc-ng=13.2.0=h77fa898_10
   - libglib=2.78.4=hdc74915_0
-  - libgomp=11.2.0=h1234567_1
+  - libgomp=13.2.0=h77fa898_10
   - libiconv=1.16=h5eee18b_3
+  - libnghttp2=1.57.0=h2d74bed_0
   - libpng=1.6.39=h5eee18b_0
+  - libssh2=1.11.0=h0841786_0
   - libstdcxx-ng=11.2.0=h1234567_1
   - libuuid=1.41.5=h5eee18b_0
   - libxcb=1.15=h7f8727e_0
-  - ncurses=6.4=h6a678d5_0
+  - libzlib=1.2.13=h4ab18f5_6
+  - ncurses=6.5=h59595ed_0
   - openjdk=11.0.13=h87a67e3_0
-  - openssl=3.0.14=h5eee18b_0
+  - openssl=3.3.1=h4ab18f5_0
   - pcre2=10.42=hebb0a14_1
   - perl=5.34.0=h5eee18b_2
   - pip=24.0=py312h06a4308_0
   - python=3.12.3=h996f2a0_1
   - readline=8.2=h5eee18b_0
+  - samtools=1.20=h50ea8bc_0
   - setuptools=69.5.1=py312h06a4308_0
   - sqlite=3.45.3=h5eee18b_0
   - tk=8.6.14=h39e8969_0
@@ -41,5 +53,5 @@ dependencies:
   - vcftools=0.1.16=h9a82719_5
   - wheel=0.43.0=py312h06a4308_0
   - xz=5.4.6=h5eee18b_1
-  - zlib=1.2.13=h5eee18b_1
+  - zlib=1.2.13=h4ab18f5_6
 prefix: /gss1/home/ksuhecheng/.conda/envs/GATK_SNP
