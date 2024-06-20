@@ -5,6 +5,7 @@ wget https://download.maizegdb.org/Zm-B73-REFERENCE-GRAMENE-4.0/Zm-B73-REFERENCE
 gunzip Zm-B73-REFERENCE-GRAMENE-4.0.fa.gz
 mv Zm-B73-REFERENCE-GRAMENE-4.0.fa B73Ref4.fa
 bwa index B73Ref4.fa
+cd ../
 
 ## BWA alignment ##
 bwadb=./input/B73Ref4.fa
