@@ -200,14 +200,14 @@ cd ../
 > ## Generates recalibration table for Base Quality Score Recalibration (BQSR) ##
 > gatk BaseRecalibrator \
 > -I input.RG.RD.bam \
-> -R reference.fasta \
+> -R reference.fa \
 > --known-sites sites_of_variation.vcf \
 > --known-sites another/optional/setOfSitesToMask.vcf \
 > -O recal_data.table
 >
 > ## Apply base quality score recalibration ##
 > gatk ApplyBQSR \
-> -R reference.fasta \
+> -R reference.fa \
 > -I input.RG.RD.bam \
 > --bqsr-recal-file recalibration.table \
 > -O output.RG.RD.BQSR.bam    
@@ -221,16 +221,16 @@ sh ./workflow/5_GATK.sh
 ```
 #!/bin/bash
 ## gatk index for reference genome ##
-samtool faidx ./input/B73Ref4.fasta
-mv B73Ref4.fasta.fai ./input/
-gatk CreateSequenceDictionary -R ./input/B73Ref4.fasta -O ./input/B73Ref4.dict
+samtools faidx ./input/B73Ref4.fa
+mv B73Ref4.fa.fai ./input/
+gatk CreateSequenceDictionary -R ./input/B73Ref4.fa -O ./input/B73Ref4.dict
 
 ## GATK SNP Calling (2 samples together) ##
-gatk HaplotypeCaller --java-options '-Xmx24g' -R ./input/B73Ref4.fasta -I ./cache/B73.RG.RD.bam -I ./cache/A188.RG.RD.bam -O ./output/B73_A188.raw.0.vcf
+gatk HaplotypeCaller --java-options '-Xmx24g' -R ./input/B73Ref4.fa -I ./cache/B73.RG.RD.bam -I ./cache/A188.RG.RD.bam -O ./output/B73_A188.raw.0.vcf
 
 ## GATK Short Variant Calling (with bam list) ##
 gatk HaplotypeCaller --java-options '-Xmx24g' \
--R ./input/B73Ref4.fasta \
+-R ./input/B73Ref4.fa \
 -I ./input/bam_list.txt \
 -O ./output/B73_A188.raw.0.vcf
 ```
@@ -247,7 +247,7 @@ sh ./workflow/6_SNP_filter.sh
 #!/bin/bash
 ## select bi-allelic SNPs ##
 vcf=./output/B73_A188.raw.0.vcf
-ref=./input/B73Ref4.fasta
+ref=./input/B73Ref4.fa
 gatk SelectVariants \
         -R $ref \
         -V $vcf \
