@@ -191,7 +191,6 @@ samtools index B73.RG.RD.bam
 samtools index A188.RG.RD.bam
 rm *.parse.sort.bam
 rm *.RG.bam
-cd ../
 ```
 > **(Optional) Recalibrate Base Quality Scores**
 > ```
