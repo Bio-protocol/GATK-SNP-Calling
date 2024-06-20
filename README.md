@@ -152,6 +152,7 @@ samtools view -u A188.parse.sam | samtools sort -o A188.parse.sort.bam
 samtools index B73.parse.sort.bam
 samtools index A188.parse.sort.bam
 rm *.sam
+cd ../
 ```
 ### Parameters for samparser.bwa.pl:
 > - **--input|i:** SAM file
@@ -191,6 +192,7 @@ samtools index B73.RG.RD.bam
 samtools index A188.RG.RD.bam
 rm *.parse.sort.bam
 rm *.RG.bam
+cd ../
 ```
 > **(Optional) Recalibrate Base Quality Scores**
 > ```
