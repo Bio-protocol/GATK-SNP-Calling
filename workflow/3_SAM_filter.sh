@@ -10,3 +10,4 @@ samtools view -u A188.parse.sam | samtools sort -o A188.parse.sort.bam
 samtools index B73.parse.sort.bam
 samtools index A188.parse.sort.bam
 rm *.sam
+cd ../
