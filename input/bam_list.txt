@@ -1,2 +1,0 @@
-./cache/B73.RG.RD.bam
-./cache/A188.RG.RD.bam
