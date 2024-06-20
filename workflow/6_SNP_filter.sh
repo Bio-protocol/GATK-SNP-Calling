@@ -1,7 +1,7 @@
 #!/bin/bash
 ## select bi-allelic SNPs ##
 vcf=./output/B73_A188.raw.0.vcf
-ref=./input/B73Ref4.fasta
+ref=./input/B73Ref4.fa
 gatk SelectVariants \
         -R $ref \
         -V $vcf \
@@ -13,12 +13,12 @@ gatk SelectVariants \
 gatk VariantFiltration --java-options '-Xmx24g' -R $ref -V ./output/B73_A188.bi.1.vcf.gz \
 --filter-expression "QD < 2.0 || MQ < 40.0 || FS > 60.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0 || SOR > 3.0" \
 --filter-name "hard_filter"  \
--O ./output/B73_A188.HF.2.vcf.gz
+-O ./output/B73_A188.HF.2.vcf.gz &>./output/B73_A188.HF.log
 
 ## Extract PASS SNPs ##
 gatk SelectVariants --java-options '-Xmx24g' -R $ref -V ./output/B73_A188.HF.2.vcf.gz \
 --exclude-filtered \
--O ./output/B73_A188.PASS.3.vcf.gz
+-O ./output/B73_A188.PASS.3.vcf.gz &>./output/B73_A188.PASS.log
 
 ## (Optional) Convert heterozygous SNPs to Missing ##
 gatk VariantFiltration --java-options '-Xmx24g' \
