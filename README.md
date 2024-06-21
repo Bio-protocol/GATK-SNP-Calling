@@ -33,14 +33,14 @@ source ~/.bashrc
 > One-command run to install all softwares by GATK_SNP.yaml 
 ```
 conda env create -f GATK_SNP.yaml
-source activate GATK_SNP
+conda activate GATK_SNP
 ```
 
-#### (Optional) You can also install softwares one by one manually
+#### Alternatively, you can also create a conda environment and install software step by step.
 > Create and load conda environment
 ```
 conda create -n GATK_SNP
-source activate GATK_SNP
+conda activate GATK_SNP
 ```
 #### Installing [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 > Software for reads trimming
